@@ -13,7 +13,7 @@ export class Course { //Exportera klassen Course så den kan användas i andra f
     }
 
     async getCourse(fetchId) { //Metod för att hämta enskild kurs
-        let course = await fetch(`http://127.0.0.1/courses/${fetchId}`);
+        let course = await fetch(`http://127.0.0.1:3000/courses/${fetchId}`);
         let courseObj = course.json();
 
         this.id = courseObj._id; //Tilldela värden från kurs-objektet till instansens medlemsvariabler
@@ -23,9 +23,7 @@ export class Course { //Exportera klassen Course så den kan användas i andra f
     }
 
     async deleteCourse(id) { //Metod för att radera kurs
-        console.log("i deletecourse");
-        let message = await fetch(`http://127.0.0.1/courses/${id}`, { method: "DELETE" }); //Delete som metod
-        console.log("i deletecourse. Message: " + message);
+        let message = await fetch(`http://127.0.0.1:3000/courses/${id}`, { method: "DELETE" }); //Delete som metod
         return message.json(); //Returnera meddelandet från API:et
     }
 

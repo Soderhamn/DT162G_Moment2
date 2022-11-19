@@ -33,7 +33,7 @@ router.get('/:id', (req, res, next) => {
         res.send(courseFound); //Returnera hittad kurs som json-sträng
     }
     else {
-        res.send(`Ingen kurs med id ${id} hittades`); //Felaktigt id angivet
+        res.send(JSON.stringify(`Ingen kurs med id ${id} hittades`)); //Felaktigt id angivet
     }
 });
 
@@ -52,7 +52,7 @@ router.delete('/:id', (req, res, next) => {
             coursesArr.splice(i, 1); //Radera 1 element med index i ur coursesArr-arrayen
             deleted = true; 
             res.contentType('application/json');
-            res.send(`Kurs med id: ${id} raderades`);
+            res.send(JSON.stringify(`Kurs med id: ${id} raderades`));
         }
     }
 

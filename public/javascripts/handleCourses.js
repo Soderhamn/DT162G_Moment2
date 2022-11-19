@@ -15,8 +15,8 @@ window.addEventListener("load", function() { printAllCourses(); }); //Skriv ut k
 
 //Funktioner
 async function deleteCourse(id) { //Radera kurs
-    course.deleteCourse(id); //Anropa metoden id i klassen Course och skicka med id på kurs som ska tas bort
-    //printAllCourses(); //Skriv ut tabellen på nytt efter att en kurs tagits bort
+    await course.deleteCourse(id); //Anropa metoden id i klassen Course och skicka med id på kurs som ska tas bort
+    printAllCourses(); //Skriv ut tabellen på nytt efter att en kurs tagits bort
 }
 
 async function printAllCourses() { //Skriv ut tabellrader med alla kurser
@@ -30,7 +30,7 @@ async function printAllCourses() { //Skriv ut tabellrader med alla kurser
     for(let i = 0; i < buttons.length; i++) //Loopa igenom knapparna och lägg till eventlyssnare
     {
         let id = buttons[i].getAttribute("id"); //Hämta id för aktuell knapp (samma som kursid)
-        buttons[i].addEventListener("click", async () => { await deleteCourse(id) }); //Lägg till eventlyssnare
+        buttons[i].addEventListener("click", () => { deleteCourse(id) }); //Lägg till eventlyssnare
     }  
         
 }
