@@ -12,10 +12,12 @@
     <!-- Milligram CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
     <link rel="stylesheet" href="stylesheets/style.css">
+    <!--Font Awesome 4.7 för ikoner-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="container">
 <head>
-    <h1>Kurser</h1>
+    <h1>DT162G - Moment 2</h1>
 </head>
 <main>
     <h2>Konsumera webbtjänst</h2>
@@ -27,12 +29,18 @@
                 <th>Kurs-id:</th>
                 <th>Kursnamn:</th>
                 <th>Period:</th>
+                <th>Radera:</th>
             </tr>
         </thead>
+        <tbody id="courseList">
+
+        </tbody>
     </table>
 </main>
 <footer>
     <p>Av: Marcus Andersson, <a href="mailto:maan2117@student.miun.se">maan2117@student.miun.se</a></p>
 </footer>
+<!--Importera skript för att hantera kurser-->
+<script type="module" src="./javascripts/handleCourses.js"></script>
 </body>
 </html>
