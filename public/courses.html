@@ -36,11 +36,20 @@
 
         </tbody>
     </table>
+    <span id="lblResponse" style="color: green"></span>
+    <h2>Lägg till en kurs: </h2>
+    <form id="form1">
+        <label for="kId">Kurs-id: </label> <input type="text" name="kId" id="kId">
+        <label for="kNamn">Kursnamn: </label> <input type="text" name="kNamn" id="kNamn">
+        <label for="kPeriod">Kursperiod: </label> <input type="text" name="kPeriod" id="kPeriod">
+        <input type="submit" value="Lägg till ny kurs">
+    </form>
 </main>
 <footer>
     <p>Av: Marcus Andersson, <a href="mailto:maan2117@student.miun.se">maan2117@student.miun.se</a></p>
 </footer>
 <!--Importera skript för att hantera kurser-->
 <script type="module" src="./javascripts/handleCourses.js"></script>
+<script src="./javascripts/functions.js"></script> <!--Functioner, bla. för att hindra att formulär submittas-->
 </body>
 </html>

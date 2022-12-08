@@ -27,5 +27,6 @@ export class Course { //Exportera klassen Course så den kan användas i andra f
         return message.json(); //Returnera meddelandet från API:et
     }
 
+
 }
 
